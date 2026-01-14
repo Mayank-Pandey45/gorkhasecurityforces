@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GORKHA SECURITY FORCE - Professional Security Services</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                fontFamily: {
+                    sans: ['Plus Jakarta Sans', 'sans-serif'],
+                },
+                extend: {
+                    colors: {
+                        brand: {
+                            dark: '#0f172a', // Slate 900
+                            primary: '#0d9488', // Teal 600
+                            accent: '#f97316', // Orange 500
+                        }
+                    },
+                    boxShadow: {
+                        'card': '0 10px 30px -5px rgba(0, 0, 0, 0.1)',
+                        'card-hover': '0 20px 40px -5px rgba(0, 0, 0, 0.2)',
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        /* Map styling */
+        .map-container iframe {
+            width: 100%;
+            height: 450px;
+            filter: grayscale(20%);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-slate-800 antialiased selection:bg-teal-500 selection:text-white">
+
+    <a href="tel:+917993674802" class="fixed bottom-6 right-6 z-50 bg-red-600 text-white p-4 rounded-full shadow-2xl hover:scale-110 transition-transform animate-bounce">
+        <i class="ri-phone-fill text-2xl"></i>
+    </a>
+
+    <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 py-6">
+        <div class="max-w-7xl mx-auto px-6 flex justify-between items-center">
+            
+            <div class="flex items-center gap-3">
+                <img id="nav-logo-img" src="" alt="Logo" class="w-12 h-12 object-contain drop-shadow-lg">
+                <span id="nav-logo-text" class="text-xl md:text-2xl font-bold text-white tracking-wide uppercase drop-shadow-md">
+                    GORKHA SECURITY FORCE
+                </span>
+            </div>
+
+            <div id="desktop-menu-container" class="hidden lg:flex items-center gap-8 bg-white/10 backdrop-blur-md px-8 py-3 rounded-full border border-white/10 shadow-lg transition-all duration-300">
+                <a href="#home" class="nav-link text-sm font-semibold text-white hover:text-teal-400 transition-colors">Home</a>
+                <a href="#services" class="nav-link text-sm font-semibold text-white hover:text-teal-400 transition-colors">Services</a>
+                <a href="#testimonials" class="nav-link text-sm font-semibold text-white hover:text-teal-400 transition-colors">Testimonials</a>
+                <a href="#contact" class="nav-link text-sm font-semibold text-white hover:text-teal-400 transition-colors">Contact</a>
+            </div>
+
+            <div class="hidden lg:block">
+                <a href="tel:+917993674802" class="bg-gradient-to-r from-orange-500 to-red-600 text-white text-sm font-bold px-6 py-3 rounded-full shadow-lg hover:shadow-orange-500/30 hover:-translate-y-1 transition-all duration-300 flex items-center gap-2">
+                    <i class="ri-phone-fill"></i> +91-7993674802
+                </a>
+            </div>
+
+            <button id="mobile-menu-btn" class="lg:hidden text-3xl text-white">
+                <i class="ri-menu-4-line"></i>
+            </button>
+        </div>
+
+        <div id="mobile-menu" class="hidden lg:hidden bg-white absolute top-full left-0 right-0 shadow-xl border-t border-gray-100 p-6 flex flex-col gap-4 z-50">
+            <a href="#home" class="text-slate-800 font-bold text-lg border-b pb-2">Home</a>
+            <a href="#services" class="text-slate-800 font-bold text-lg border-b pb-2">Services</a>
+            <a href="#testimonials" class="text-slate-800 font-bold text-lg border-b pb-2">Testimonials</a>
+            <a href="#contact" class="text-slate-800 font-bold text-lg">Contact</a>
+        </div>
+    </nav>
+
+    <section id="home" class="relative h-screen flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img id="hero-bg-img" src="" alt="Security Background" class="w-full h-full object-cover object-top">
+            <div class="absolute inset-0 bg-gradient-to-r from-slate-900/90 via-slate-900/70 to-transparent"></div>
+        </div>
+
+        <div class="relative z-10 max-w-7xl w-full mx-auto px-6 pt-20">
+            <div class="max-w-3xl">
+                <div class="inline-block bg-teal-500/20 backdrop-blur-sm border border-teal-500/30 rounded-full px-4 py-1 mb-6">
+                    <span class="text-teal-300 text-sm font-bold tracking-wider uppercase">ISO 9001:2015 Certified</span>
+                </div>
+                <h1 class="text-5xl md:text-7xl font-extrabold text-white leading-tight mb-6 drop-shadow-2xl">
+                    GORKHA SECURITY <br>
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-teal-200">
+                        FORCE
+                    </span>
+                </h1>
+                <p class="text-xl text-gray-200 mb-10 leading-relaxed font-light max-w-2xl">
+                    Protecting Hyderabad's assets with highly trained security guards, armed personnel, and professional housekeeping staff.
+                </p>
+                
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="#contact" class="bg-teal-600 text-white text-lg font-bold px-8 py-4 rounded-full shadow-lg hover:bg-teal-500 hover:shadow-teal-500/40 transition-all text-center">
+                        Get Free Quote
+                    </a>
+                    <a href="#services" class="glass-card text-blue-600 text-lg font-bold px-8 py-4 rounded-full hover:bg-white hover:text-slate-900 transition-all text-center">
+                        Our Services
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h3 class="text-teal-600 font-bold tracking-wider uppercase mb-2">Our Expertise</h3>
+                <h2 class="text-4xl md:text-5xl font-bold text-slate-900">Premium Services</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                
+                <div class="group bg-white rounded-2xl overflow-hidden border border-gray-100 shadow-card hover:shadow-card-hover hover:-translate-y-2 transition-all duration-300">
+                    <div class="h-48 overflow-hidden">
+                        <img id="srv-img-1" src="" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-3 mb-3">
+                            <i class="ri-shield-user-line text-2xl text-blue-600"></i>
+                            <h3 class="text-xl font-bold text-slate-900">Security Guard</h3>
+                        </div>
+                        <p class="text-gray-500 text-sm leading-relaxed mb-4">Manned guarding for corporate, industrial, and residential premises with 24/7 alertness.</p>
+                        <a href="#contact" class="text-blue-600 font-bold text-sm uppercase tracking-wide">Book Now</a>
+                    </div>
+                </div>
+
+                <div class="group bg-white rounded-2xl overflow-hidden border border-gray-100 shadow-card hover:shadow-card-hover hover:-translate-y-2 transition-all duration-300">
+                    <div class="h-48 overflow-hidden">
+                        <img id="srv-img-2" src="" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-3 mb-3">
+                            <i class="ri-brush-line text-2xl text-green-600"></i>
+                            <h3 class="text-xl font-bold text-slate-900">Housekeeping</h3>
+                        </div>
+                        <p class="text-gray-500 text-sm leading-relaxed mb-4">Professional cleaning services for spotless offices, malls, and societies.</p>
+                        <a href="#contact" class="text-green-600 font-bold text-sm uppercase tracking-wide">Book Now</a>
+                    </div>
+                </div>
+
+                <div class="group bg-white rounded-2xl overflow-hidden border border-gray-100 shadow-card hover:shadow-card-hover hover:-translate-y-2 transition-all duration-300">
+                    <div class="h-48 overflow-hidden">
+                        <img id="srv-img-3" src="" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-3 mb-3">
+                            <i class="ri-shield-star-line text-2xl text-red-600"></i>
+                            <h3 class="text-xl font-bold text-slate-900">Armed Guard</h3>
+                        </div>
+                        <p class="text-gray-500 text-sm leading-relaxed mb-4">Licensed armed PSOs for high-risk protection and cash logistics security.</p>
+                        <a href="#contact" class="text-red-600 font-bold text-sm uppercase tracking-wide">Book Now</a>
+                    </div>
+                </div>
+
+                <div class="group bg-white rounded-2xl overflow-hidden border border-gray-100 shadow-card hover:shadow-card-hover hover:-translate-y-2 transition-all duration-300">
+                    <div class="h-48 overflow-hidden">
+                        <img id="srv-img-4" src="" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-3 mb-3">
+                            <i class="ri-user-star-line text-2xl text-orange-600"></i>
+                            <h3 class="text-xl font-bold text-slate-900">Bouncers</h3>
+                        </div>
+                        <p class="text-gray-500 text-sm leading-relaxed mb-4">Physically robust bouncers for events, club security, and VIP escorts.</p>
+                        <a href="#contact" class="text-orange-600 font-bold text-sm uppercase tracking-wide">Book Now</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="testimonials" class="py-24 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h3 class="text-teal-600 font-bold tracking-wider uppercase mb-2">Our Clients Speak</h3>
+                <h2 class="text-4xl md:text-5xl font-bold text-slate-900">Trusted by Hyderabad</h2>
+            </div>
+
+            <div class="relative max-w-4xl mx-auto overflow-hidden">
+                <div id="testimonial-track" class="flex transition-transform duration-700 ease-in-out">
+                    
+                    <div class="w-full flex-shrink-0 px-4">
+                        <div class="bg-white p-10 rounded-3xl shadow-xl text-center border border-gray-100">
+                            <div class="text-yellow-400 flex justify-center gap-1 mb-6 text-xl">
+                                <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i>
+                            </div>
+                            <p class="text-xl text-slate-600 italic leading-relaxed mb-8">
+                                "Gorkha Security has been safeguarding our factory in Jeedimetla for 3 years. Their guards are disciplined, punctual, and very professional. Highly recommended."
+                            </p>
+                            <div>
+                                <h4 class="text-lg font-bold text-slate-900">Ramesh Gupta</h4>
+                                <p class="text-sm text-teal-600 font-semibold">Factory owner, Jeedimetla</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="w-full flex-shrink-0 px-4">
+                        <div class="bg-white p-10 rounded-3xl shadow-xl text-center border border-gray-100">
+                            <div class="text-yellow-400 flex justify-center gap-1 mb-6 text-xl">
+                                <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i>
+                            </div>
+                            <p class="text-xl text-slate-600 italic leading-relaxed mb-8">
+                                "We hired their bouncers for a corporate event in Hitech City. They managed the crowd effortlessly and ensured VVIP safety. Great team!"
+                            </p>
+                            <div>
+                                <h4 class="text-lg font-bold text-slate-900">Priya Reddy</h4>
+                                <p class="text-sm text-teal-600 font-semibold">Event Manager, Hitech City</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="w-full flex-shrink-0 px-4">
+                        <div class="bg-white p-10 rounded-3xl shadow-xl text-center border border-gray-100">
+                            <div class="text-yellow-400 flex justify-center gap-1 mb-6 text-xl">
+                                <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-half-fill"></i>
+                            </div>
+                            <p class="text-xl text-slate-600 italic leading-relaxed mb-8">
+                                "Excellent housekeeping and security services for our apartment complex . The staff is trustworthy and the management is very responsive."
+                            </p>
+                            <div>
+                                <h4 class="text-lg font-bold text-slate-900">RAGHU RAM </h4>
+                                <p class="text-sm text-teal-600 font-semibold">RWA President, Banjara Hills</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="flex justify-center gap-3 mt-8">
+                    <button class="slider-dot w-3 h-3 rounded-full bg-teal-600 transition-all" onclick="goToSlide(0)"></button>
+                    <button class="slider-dot w-3 h-3 rounded-full bg-gray-300 transition-all" onclick="goToSlide(1)"></button>
+                    <button class="slider-dot w-3 h-3 rounded-full bg-gray-300 transition-all" onclick="goToSlide(2)"></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-white py-10">
+        <div class="max-w-7xl mx-auto px-6 mb-6">
+            <h2 class="text-3xl font-bold text-slate-900 mb-2">Locate Us</h2>
+            <p class="text-slate-500">Visit our headquarters in Hyderabad</p>
+        </div>
+        <div class="map-container w-full">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3807.411470762123!2d78.4552483153696!3d17.39953908807147!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb976b97669d03%3A0xc6c766b16757d5e!2sChintal%20Basti%2C%20Khairtabad%2C%20Hyderabad%2C%20Telangana!5e0!3m2!1sen!2sin!4v1675123456789!5m2!1sen!2sin" 
+            style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </section>
+
+    <footer id="contact" class="bg-slate-900 text-white pt-20 pb-10">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+            
+            <div>
+                <div class="flex items-center gap-3 mb-6">
+                    <img id="footer-logo-img" src="" class="w-12 h-12 object-contain bg-white rounded-full p-1">
+                </div>
+                <h3 class="text-xl font-bold mb-4">GORKHA SECURITY FORCE</h3>
+                <p class="text-slate-400 leading-relaxed">
+                    Setting the standard for private security in Telangana. Reliable, Disciplined, and Professional.
+                </p>
+            </div>
+
+            <div class="col-span-1 lg:col-span-2">
+                <h4 class="text-lg font-bold mb-6 text-teal-500">Head Office</h4>
+                <div class="flex flex-col gap-4">
+                    <div class="flex items-start gap-4">
+                        <i class="ri-map-pin-line text-slate-400 mt-1 text-xl"></i>
+                        <p class="text-slate-300">
+                            House no 10-1-812/A, Veer Nagar,<br>
+                            Chintal Basti, Hyderabad,<br>
+                            Telangana 500004
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <i class="ri-phone-fill text-slate-400 text-xl"></i>
+                        <a href="tel:+917993674802" class="text-slate-300 hover:text-white transition-colors text-lg font-semibold">
+                            +91-7993674802
+                        </a>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <i class="ri-mail-fill text-slate-400 text-xl"></i>
+                        <a href="mailto:gorkha.s.force97@gmail.com" class="text-slate-300 hover:text-white transition-colors">
+                            gorkha.s.force97@gmail.com
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <h4 class="text-lg font-bold mb-6 text-teal-500">Quick Links</h4>
+                <ul class="space-y-3 text-slate-400">
+                    <li><a href="#services" class="hover:text-white">Security Guard</a></li>
+                    <li><a href="#services" class="hover:text-white">House Keeping</a></li>
+                    <li><a href="#services" class="hover:text-white">Armed Guard</a></li>
+                    <li><a href="#services" class="hover:text-white">Bouncers</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-6 border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-slate-500 text-sm">
+            <p>© 2024 GORKHA SECURITY FORCE. All Rights Reserved.</p>
+            <p>Privacy Policy | Terms of Service</p>
+        </div>
+    </footer>
+
+    <script>
+        // ------------------------------------------------------------------
+        // ! PHOTO CONFIGURATION - USING YOUR UPLOADED FILENAMES !
+        // ------------------------------------------------------------------
+        const siteConfig = {
+            images: {
+                logo: "https://static.readdy.ai/image/47a3fc5766d079f2e3b50d693492daed/d04beaafe156151219f57ed2f2116943.jpeg",
+                
+                // MAIN BANNER IMAGE
+                heroBg: "hero.png", 
+                
+                // SERVICES IMAGES (Exact filenames you uploaded)
+                serviceGuard: "Security guard.png",
+                serviceHousekeeping: "Houseekeping.png",
+                serviceArmed: "armguard.png",
+                serviceBouncer: "bouncer.png"
+            }
+        };
+
+        // ----------------------------------------------------
+        // Logic (Images + Navbar + Slider)
+        // ----------------------------------------------------
+        document.addEventListener('DOMContentLoaded', () => {
+            // Assign Images
+            document.getElementById('nav-logo-img').src = siteConfig.images.logo;
+            document.getElementById('footer-logo-img').src = siteConfig.images.logo;
+            document.getElementById('hero-bg-img').src = siteConfig.images.heroBg;
+            
+            document.getElementById('srv-img-1').src = siteConfig.images.serviceGuard;
+            document.getElementById('srv-img-2').src = siteConfig.images.serviceHousekeeping;
+            document.getElementById('srv-img-3').src = siteConfig.images.serviceArmed;
+            document.getElementById('srv-img-4').src = siteConfig.images.serviceBouncer;
+
+            // Start Auto Slider
+            setInterval(nextSlide, 5000);
+        });
+
+        // NAVBAR SCROLL LOGIC
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('navbar');
+            const logoText = document.getElementById('nav-logo-text');
+            const desktopMenu = document.getElementById('desktop-menu-container');
+            const menuLinks = document.querySelectorAll('.nav-link');
+            const menuBtn = document.getElementById('mobile-menu-btn');
+            
+            if (window.scrollY > 50) {
+                nav.classList.add('bg-white', 'shadow-xl', 'py-3');
+                nav.classList.remove('py-6');
+                logoText.classList.remove('text-white');
+                logoText.classList.add('text-slate-900');
+                menuBtn.classList.remove('text-white');
+                menuBtn.classList.add('text-slate-900');
+                desktopMenu.classList.remove('bg-white/10', 'border-white/10', 'text-white');
+                desktopMenu.classList.add('bg-slate-100', 'border-slate-200');
+                menuLinks.forEach(link => { link.classList.remove('text-white'); link.classList.add('text-slate-800'); });
+            } else {
+                nav.classList.remove('bg-white', 'shadow-xl', 'py-3');
+                nav.classList.add('py-6');
+                logoText.classList.add('text-white');
+                logoText.classList.remove('text-slate-900');
+                menuBtn.classList.add('text-white');
+                menuBtn.classList.remove('text-slate-900');
+                desktopMenu.classList.add('bg-white/10', 'border-white/10');
+                desktopMenu.classList.remove('bg-slate-100', 'border-slate-200');
+                menuLinks.forEach(link => { link.classList.add('text-white'); link.classList.remove('text-slate-800'); });
+            }
+        });
+
+        // MOBILE MENU
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        btn.addEventListener('click', () => menu.classList.toggle('hidden'));
+
+        // TESTIMONIAL SLIDER LOGIC
+        let currentSlide = 0;
+        const totalSlides = 3;
+        const track = document.getElementById('testimonial-track');
+        const dots = document.querySelectorAll('.slider-dot');
+
+        function updateSlider() {
+            track.style.transform = `translateX(-${currentSlide * 100}%)`;
+            dots.forEach((dot, index) => {
+                if (index === currentSlide) {
+                    dot.classList.remove('bg-gray-300');
+                    dot.classList.add('bg-teal-600', 'w-6');
+                } else {
+                    dot.classList.add('bg-gray-300');
+                    dot.classList.remove('bg-teal-600', 'w-6');
+                }
+            });
+        }
+
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % totalSlides;
+            updateSlider();
+        }
+
+        function goToSlide(index) {
+            currentSlide = index;
+            updateSlider();
+        }
+    </script>
+</body>
+</html>
